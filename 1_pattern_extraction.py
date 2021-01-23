@@ -132,7 +132,7 @@ for file_idx in range(len(label)):
     label_count = label.irow(file_idx)[range(num_species)].sum()
     bird_spec = label.irow(file_idx)[range(num_species)].argmax() # first bird
     
-    if(test_flag < 1  and label_count ==1):
+    if(test_flag < 1  and label_count >=1):
         mypic = np.transpose(ffts[file_idx])
         mypic_rev = np.zeros_like(mypic)
         for i in range(mypic.shape[0]):
